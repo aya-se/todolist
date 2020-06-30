@@ -15,14 +15,13 @@
         placeholder="日時を選択してください"
       ></el-date-picker>
       <el-button type="primary" round v-on:click="onadd">追加</el-button>
-      <el-button type="info" round v-on:click="onsort">並び替え</el-button>
     </form>
     <table class="table">
       <th width="120">進捗状況</th>
-      <th width="300">タスク内容</th>
-      <th width="150">期限</th>
-      <th width="60"></th>
-      <th width="60"></th>
+      <th width="360">タスク内容</th>
+      <th width="200">期限</th>
+      <th width="50"></th>
+      <th width="50"></th>
       <tr v-for="(item, ind) in items" v-bind:key="item.id">
         <td v-if="item.status === false">
           <img src="../assets/exer_notyet.gif" />
@@ -64,7 +63,13 @@ export default {
         {
           id: 0,
           status: false,
-          name: 'Vue.js実践入門†完全に理解†する',
+          name: 'なろう講習会†完全に理解†する',
+          deadline: '',
+        },
+        {
+          id: 1,
+          status: true,
+          name: 'ToDoリスト移植する',
           deadline: '',
         },
       ],
