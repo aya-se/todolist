@@ -56,7 +56,7 @@
 export default {
   data() {
     return {
-      newId: 1,
+      newId: 2,
       newName: '',
       newDeadline: '',
       items: [
